@@ -1,6 +1,5 @@
 ---
 layout: page
-
 name: Person 1
 title: PhD Student
 description: First Person

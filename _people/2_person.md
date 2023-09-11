@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Person 1
+name: Person 1
+title: PhD Student
 description: First Person
 img: assets/img/12.jpg
 importance: 1
