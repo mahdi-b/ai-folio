@@ -1,8 +1,8 @@
 ---
 layout: page
-name: Person 1
-title: PhD Student
-description: First Person
+name: Mahdi Bel
+title: Assistant Professor
+description: Bioinformatics, Language models, AI Cyber Infrastructure  
 img: assets/img/12.jpg
 importance: 1
 category: current

@@ -105,6 +105,17 @@ blockquote {
   }
 }
 
+.logo{
+  width: 80px;
+  height: auto;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+}
+
+
 // Citation
 
 .citation,
@@ -198,6 +209,8 @@ blockquote {
     background-color: var(--global-bg-color);
   }
 }
+
+
 
 .navbar.navbar-light {
   a {

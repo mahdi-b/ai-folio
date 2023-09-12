@@ -1,10 +1,10 @@
 ---
 layout: page
-name: Person 1
+name: Will Harrigan
 title: PhD Student
-description: First Person
+description: Language Models in Viral Proteomics and Viral Ecology
 img: assets/img/12.jpg
-importance: 1
+importance: 2
 category: current
 related_publications: einstein1956investigations, einstein1950meaning
 ---
