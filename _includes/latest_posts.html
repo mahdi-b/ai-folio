@@ -1,35 +1,49 @@
+<div class="news">
+  {% if site.posts != blank %}
+  <div class="row row-cols-{{ latest_posts_limit }}">
+    {% if site.latest_posts.limit %}
+    {% assign latest_posts_limit = site.latest_posts.limit %}
+    {% else %}
+    {% assign latest_posts_size = site.posts | size %}
+    {% assign latest_posts_limit = latest_posts_size %}
+    {% endif %}
+    {% for item in site.posts limit: latest_posts_limit %}
+    <div class="card-item col" style="min-height: 400px;">
+      <a href="{{ item.url | relative_url }}">
+        <div class="card hoverable" style="min-height: 100%;">
+          <div class="row g-0">
 
-          <div class="news">
-            {% if site.latest_posts != blank -%}
-            {%- assign latest_posts_size = site.posts | size -%}
-            <div class="table-responsive" {% if site.latest_posts.scrollable and latest_posts_size > 3 %}style="max-height: 60vw"{% endif %}>
-              <table class="table table-sm table-borderless">
-              {%- assign latest_posts = site.posts -%}
-              {% if site.latest_posts.limit %}
-              {% assign latest_posts_limit = site.latest_posts.limit %}
+            <!-- Image Block -->
+            <div class="col-md-12" style="height: 30%;">
+              {% if item.img %}
+              <img src="{{ item.img }}" alt="Post Thumbnail" class="card-img-top" style="object-fit: cover; height: 100%;">
               {% else %}
-              {% assign latest_posts_limit = latest_posts_size %}
+              <img src="./assets/img/hero.png" alt="Default Thumbnail" class="card-img-top" style="object-fit: cover; height: 100%;">
               {% endif %}
-              {% for item in latest_posts limit: latest_posts_limit %}
-                <tr>
-                  <th scope="row">{{ item.date | date: "%b %-d, %Y" }}</th>
-                  <td>
-                    {% if item.redirect == blank %}
-                      <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
-                    {% elsif item.redirect contains '://' %}
-                      <a class="news-title" href="{{ item.redirect }}" target="_blank">{{ item.title }}</a>
-                      <svg width="2rem" height="2rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
-                      </svg>
-                    {% else %}
-                      <a class="news-title" href="{{ item.redirect | relative_url }}">{{ item.title }}</a>
-                    {% endif %}
-                  </td>
-                </tr>
-              {%- endfor %}
-              </table>
             </div>
-          {%- else -%}
-            <p>No posts so far...</p>
-          {%- endif %}
+
+            <!-- Title -->
+            <div class="col-md-12 d-flex align-items-end" style="height: 40%;">
+              <div class="card-body">
+                <h3 class="card-title text-lowercase" style="margin: 0;">{{ item.title }}</h3>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div class="col-md-12 d-flex align-items-start" style="height: 30%;">
+              <div class="card-body">
+                <div class="card-text">{{ item.description | strip_html | truncate: 140, '...' }}</div>
+                <p class="post-meta">{{ item.date | date_to_string }}</p>
+              </div>
+            </div>
+
           </div>
+        </div>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p>No posts so far...</p>
+  {% endif %}
+</div>

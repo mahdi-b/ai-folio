@@ -19,12 +19,18 @@ layout: default
   }
 
   /* Hero image styles */
+  /* Hero image styles */
   .hero-image {
     background-image: url("{{'assets/img/hero.png' | relative_url}}");
     background-size: cover;
     height: 60vh;
+
     margin-bottom: 2rem;
+    margin-left: -10%;  /* 5% extra width on the left */
+    margin-right: -10%; /* 5% extra width on the right */
+    width: calc(100% + 20%);  /* initial 100% width + 10% extra width */
   }
+
 
   /* Section spacing */
   .section {

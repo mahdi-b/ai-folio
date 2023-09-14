@@ -21,12 +21,12 @@ social: true  # includes social icons at the bottom of the page
 ---
 ### Who We Are and What We Do
 We are a multidisciplinary research lab at the University of Hawaii at Manoa. 
-We are part of the Information and Computer Sciences Department, the Hawaii 
-Institute of Marine Biology and the Hawaii Data Science Institute. 
+We are part of the [Information and Computer Sciences Department](https://ics.hawaii.edu), the Hawaii 
+[Institute of Marine Biology]() and the [Hawaii Data Science Institute](). 
 Our research centers around the utilization of informatics, including the emerging area 
 of large-scale language models, in a diverse range of fields, with a specific emphasis on their relevance and 
 potential in the field of biology.
-
+###### **Mission Statement**
 <strong>Our aim</strong> is to drive scientific innovation by creating innovative methods and technologies 
 in computational biology, natural language processing, and scientific software engineering. 
 <strong>We prioritize</strong> core values such as collaboration, respect, and excellence. 
