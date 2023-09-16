@@ -1,44 +1,30 @@
 ---
 layout: post
-title: a post with jupyter notebook
+title: Unleashing the Power of AI
 date: 2023-07-04 08:57:00-0400
-description: an example of a blog post with jupyter notebook
-tags: formatting jupyter
-categories: sample-posts
-giscus_comments: true
+description: Students with no programming experience build app in two weeks  
+categories: education
+giscus_comments: false
 related_posts: false
 ---
 
-To include a jupyter notebook in a post, you can use the following code:
+###  How Our Students Used ChatGPT to Build an Expense-Tracking App in Just Two Weeks
 
-{% raw %}
+<br/>
+The past summer has been quite a fun ride for our Lab. 
+Akib Sadmanee and I, had the privilege of hosting seven exceptional high school students in a unique  computer science internship under Project Hōkūlani.  And what these students accomplished in a short two-week period is remarkable.
 
-```html
-{::nomarkdown}
-{% assign jupyter_path = "assets/jupyter/blog.ipynb" | relative_url %}
-{% capture notebook_exists %}{% file_exists assets/jupyter/blog.ipynb %}{% endcapture %}
-{% if notebook_exists == "true" %}
-    {% jupyter_notebook jupyter_path %}
-{% else %}
-    <p>Sorry, the notebook you are looking for does not exist.</p>
-{% endif %}
-{:/nomarkdown}
-```
+Simplifying Complexity with AI
+When we started brainstorming ideas for the internship, one of the challenges was to 
+pick a project that was ambitious but achievable. We decided to build a mobile app 
+designed to help users track their expenses. Now, the exciting part of this isn't just the app itself, 
+but how we went about creating it. 
 
-{% endraw %}
+In the past, breaking down receipt information like vendor names, phone numbers, and item lists would require  heavy lifting from machine learning experts. But our highschool students 
+used ChatGPT to perform these tasks with what's known as "prompt engineering." This significantly sped up the development process, allowing us to focus more on education and less on coding.
 
-Let's break it down: this is possible thanks to [Jekyll Jupyter Notebook plugin](https://github.com/red-data-tools/jekyll-jupyter-notebook) that allows you to embed jupyter notebooks in your posts. It basically calls [`jupyter nbconvert --to html`](https://nbconvert.readthedocs.io/en/latest/usage.html#convert-html) to convert the notebook to an html page and then includes it in the post. Since [Kramdown](https://jekyllrb.com/docs/configuration/markdown/) is the default Markdown renderer for Jekyll, we need to surround the call to the plugin with the [::nomarkdown](https://kramdown.gettalong.org/syntax.html#extensions) tag so that it stops processing this part with Kramdown and outputs the content as-is.
+The students also utilized no-code platforms like Amazon Web Services to build various features such as user authentication and image uploading. And yes, ChatGPT was there to assist us with answering any technical questions that arose, making the process even smoother.
 
-The plugin takes as input the path to the notebook, but it assumes the file exists. If you want to check if the file exists before calling the plugin, you can use the `file_exists` filter. This avoids getting a 404 error from the plugin and ending up displaying the main page inside of it instead. If the file does not exist, you can output a message to the user. The code displayed above outputs the following:
+What strikes me the most is how this experience highlights the influence of AI technologies like ChatGPT on the future of software development. If high school students can build such a complex app in just 40 hours, most of which was spent on learning rather than coding, imagine the technological advancements we can expect in the coming years.
 
-{::nomarkdown}
-{% assign jupyter_path = "assets/jupyter/blog.ipynb" | relative_url %}
-{% capture notebook_exists %}{% file_exists assets/jupyter/blog.ipynb %}{% endcapture %}
-{% if notebook_exists == "true" %}
-    {% jupyter_notebook jupyter_path %}
-{% else %}
-    <p>Sorry, the notebook you are looking for does not exist.</p>
-{% endif %}
-{:/nomarkdown}
-
-Note that the jupyter notebook supports both light and dark themes.
+What's next for next year interns? We're not sure yet, but we're excited to find out!

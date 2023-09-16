@@ -1,50 +1,28 @@
-<!-- _includes/person.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-    {%- if person.redirect -%}
-    <a href="{{ person.redirect }}">
-        {%- else -%}
-        <a href="{{ person.url | relative_url }}">
+<div class="col-md-4">
+    <div class="card">
+        <a href="{{ person.redirect | default: person.url | relative_url }}">
+            {%- if person.img -%}
+            <img class="card-img-top" src="{{ person.img | relative_url }}" alt="Person Thumbnail">
             {%- endif -%}
-            <div class="card hoverable">
-                <!-- Show Image -->
-                {%- if person.img -%}
-                {%- include figure.html
-                path=person.img
-                alt="Person Thumbnail" -%}
+            <div class="card-body">
+                {%- if person.title -%}
+                <p class="card-subtitle text-muted truncate-text">{{ person.title | uppercase }}</p>
                 {%- endif -%}
 
-                <!-- Show Card Body -->
-                <div class="card-body">
-                    <!-- Show Title -->
-                    {%- if person.title -%}
-                    <p class="card-subtitle text-muted">{{ person.title | capitalize }}</p>
-                    {%- endif -%}
+                {%- if person.name -%}
+                <h3 class="card-title truncate-text">{{ person.name | uppercase }}</h3>
+                {%- endif -%}
 
-                    <!-- Show Name -->
-                    {%- if person.name -%}
-                    <h3 class="card-title">{{ person.name | capitalize }}</h3>
-                    {%- endif -%}
+                {%- if person.description -%}
+                <p class="card-text">{{ person.description }}</p>
+                {%- endif -%}
 
-                    <!-- Show Other Elements -->
-                    <p class="card-text">{{ person.description }}</p>
-
-                    <div class="row ml-1 mr-1 p-0">
-                        {%- if person.github -%}
-                        <div class="github-icon">
-                            <div class="icon" data-toggle="tooltip" title="Code Repository">
-                                <a href="{{ person.github }}"><i class="fab fa-github gh-icon"></i></a>
-                            </div>
-                            {%- if person.github_stars -%}
-                            <span class="stars" data-toggle="tooltip" title="GitHub Stars">
-              <i class="fas fa-star"></i>
-              <span id="{{ person.github_stars }}-stars"></span>
-            </span>
-                            {%- endif %}
-                        </div>
-                        {%- endif %}
-                    </div>
-                </div>
+                {%- if person.github -%}
+                <a href="{{ person.github }}" class="btn btn-primary">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                {%- endif -%}
             </div>
         </a>
+    </div>
 </div>

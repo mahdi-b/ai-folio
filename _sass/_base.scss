@@ -83,8 +83,34 @@ blockquote {
 
 // Card
 
+/* Truncate Text */
+.truncate-text {
+  white-space: nowrap;      /* Keep all text in single line */
+  overflow: hidden;         /* Hide overflow text */
+  text-overflow: ellipsis;  /* Show ellipsis (...) when text overflows */
+}
+
+/* Handle Overflow for Description */
+.card-text {
+  max-height: 100px;        /* Set to a fixed max-height */
+  overflow: auto;           /* Show scrollbars if content overflows */
+}
+
+
 .card {
   background-color: var(--global-card-bg-color);
+  min-height: 320px; /* Set to whatever value you prefer */
+  min-width: 250px;
+  max-width: 250px;
+  max-height: 320px; /* Make sure this is the same as min-height */
+  overflow: hidden;  /* Hide overflow content */
+  position: relative; /* Relative position for inner positioning */
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+
 
   img {
     width: 100%;
@@ -108,6 +134,7 @@ blockquote {
 .logo{
   width: 50px;
   height: auto;
+  border-radius: 50%;
 }
 
 .hero-image img {
@@ -374,6 +401,11 @@ footer.sticky-bottom {
   margin-bottom: 40px;
 
   .card {
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
     background-color: var(--global-card-bg-color);
     border: 1px solid var(--global-divider-color);
 
@@ -527,6 +559,10 @@ footer.sticky-bottom {
   }
 
   .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
     img {
       width: 100%;
     }

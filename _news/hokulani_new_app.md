@@ -2,6 +2,7 @@
 layout: post
 title: High School Students Create New App Using Artificial Intelligence 
 date: 2023-08-31
+published: true
 inline: false
 related_posts: false
 ---
@@ -21,6 +22,7 @@ Students used ChatGPT to complete tasks that would have traditionally required m
 
 This second cohort of students was paid $1,000 stipends for 48 hours of work at the computer lab. Since the project began, 66 interns throughout the state have participated at various STEM sites. In 2022–23, sites included three on Lāna‘i: the Four Seasons Observatory at Mānele, Venture Physiotherapy in Lāna‘i City, and the Lāna‘i Limu Restoration Project. On other islands, new sites included Nā Waʻa Mauō, Terraformation, and Iwikua.
 
+Read about Project Hōkūlani news and updates here: https://www.hawaii.edu/news/2023/09/12/project-hokulani-resheipt-app/
+
 Learn how the RESHEIPT app works here: https://go.hawaii.edu/yXd
 
-Read about Project Hōkūlani news and updates here: https://go.hawaii.edu/6Xy
